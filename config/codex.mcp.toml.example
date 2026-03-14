@@ -1,0 +1,7 @@
+[mcp_servers.supplier_catalog]
+command = "node"
+args = ["/ABSOLUTE/PATH/TO/part-searcher/dist/src/servers/supplier-catalog.js"]
+
+[mcp_servers.supplier_scraper]
+command = "node"
+args = ["/ABSOLUTE/PATH/TO/part-searcher/dist/src/servers/supplier-scraper.js"]

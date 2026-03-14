@@ -1,0 +1,4 @@
+interface:
+  display_name: "Supplier Catalog Tracer"
+  short_description: "Trace parts across supplier catalogs with MCP and browser fallback"
+  default_prompt: "Use $supplier-catalog-tracer to trace this part across McMaster-Carr, Grainger, Amazon, DigiKey, ULINE, and similar supplier catalogs."

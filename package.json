@@ -1,0 +1,25 @@
+{
+  "name": "part-searcher",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "dev:catalog": "tsx src/servers/supplier-catalog.ts",
+    "dev:scraper": "tsx src/servers/supplier-scraper.ts",
+    "install:codex": "bash scripts/install-to-codex.sh"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.2",
+    "axios": "^1.8.4",
+    "cheerio": "^1.1.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.2.4"
+  }
+}
