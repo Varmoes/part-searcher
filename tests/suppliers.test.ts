@@ -21,6 +21,24 @@ describe("supplier planning", () => {
     const plan = buildSearchPlan(supplier!, "91290A115");
     expect(plan.directPartUrl).toBe("https://www.mcmaster.com/91290A115");
   });
+
+  it("resolves newly added suppliers", () => {
+    expect(resolveSupplier("fastenal")?.name).toBe("Fastenal");
+    expect(resolveSupplier("msc direct")?.id).toBe("msc");
+    expect(resolveSupplier("mouser")?.domain).toBe("mouser.com");
+  });
+
+  it("builds the expected search URLs for Fastenal, MSC, and Mouser", () => {
+    expect(buildSearchPlan(resolveSupplier("fastenal")!, "hex bolt").searchUrl).toBe(
+      "https://www.fastenal.com/search?query=hex%20bolt",
+    );
+    expect(buildSearchPlan(resolveSupplier("msc")!, "end mill").searchUrl).toBe(
+      "https://www.mscdirect.com/browse/tn?searchterm=end%20mill",
+    );
+    expect(buildSearchPlan(resolveSupplier("mouser")!, "LM358").searchUrl).toBe(
+      "https://www.mouser.com/c/?q=LM358",
+    );
+  });
 });
 
 describe("HTML extraction", () => {

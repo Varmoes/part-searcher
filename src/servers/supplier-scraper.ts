@@ -138,8 +138,9 @@ server.tool(
       }
 
       const plan = buildSearchPlan(match, query);
-      const targetUrl = match.mode === "direct" ? plan.searchUrl : plan.siteSearchUrl;
-      const strategy = match.mode === "direct" ? "direct-search" : "site-search";
+      const useSearchEngine = match.mode === "search-engine";
+      const targetUrl = useSearchEngine ? plan.siteSearchUrl : plan.searchUrl;
+      const strategy = useSearchEngine ? "site-search" : "direct-search";
 
       try {
         const response = await fetchText(targetUrl);
@@ -155,7 +156,9 @@ server.tool(
           browserRecommended: match.browserPreferred ?? false,
           results: blocked.blocked
             ? []
-            : extractDuckDuckGoResults(response.text, limitPerSupplier),
+            : useSearchEngine
+              ? extractDuckDuckGoResults(response.text, limitPerSupplier)
+              : extractGenericLinks(response.text, limitPerSupplier, match.domain),
         });
       } catch (error) {
         traces.push({

@@ -1,6 +1,6 @@
 ---
 name: supplier-catalog-tracer
-description: Trace parts and comparable products across supplier catalogs such as McMaster-Carr, Grainger, Amazon, DigiKey, and ULINE. Use when the user wants catalog research, part-number lookup, product comparison, supplier cross-reference, or browser-assisted tracing through industrial or ecommerce product libraries.
+description: Trace parts and comparable products across supplier catalogs such as McMaster-Carr, Grainger, Amazon, DigiKey, Fastenal, MSC, Mouser, and ULINE. Use when the user wants catalog research, part-number lookup, product comparison, supplier cross-reference, or browser-assisted tracing through industrial or ecommerce product libraries.
 ---
 
 # Supplier Catalog Tracer

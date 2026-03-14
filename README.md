@@ -1,6 +1,6 @@
 # Part Searcher
 
-Local MCP servers and a Codex skill for tracing parts across supplier catalogs such as McMaster-Carr, Grainger, Amazon, DigiKey, and ULINE.
+Local MCP servers and a Codex skill for tracing parts across supplier catalogs such as McMaster-Carr, Grainger, Amazon, DigiKey, Fastenal, MSC, Mouser, and ULINE.
 
 ## What is included
 

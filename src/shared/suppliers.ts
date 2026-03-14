@@ -52,6 +52,40 @@ const BUILTIN_SUPPLIERS: SupplierDefinition[] = [
       "Raw HTTP often hits challenge pages. Search-engine discovery works better for initial trace; verify product pages in browser.",
   },
   {
+    id: "fastenal",
+    name: "Fastenal",
+    homepage: "https://www.fastenal.com/",
+    domain: "fastenal.com",
+    mode: "search-engine",
+    browserPreferred: true,
+    searchUrlTemplate: "https://www.fastenal.com/search?query={query}",
+    notes:
+      "Raw HTTP search is blocked, but site-search discovery still returns usable links. Validate results in a browser session.",
+  },
+  {
+    id: "msc",
+    name: "MSC Industrial Supply",
+    homepage: "https://www.mscdirect.com/",
+    domain: "mscdirect.com",
+    aliases: ["msc direct", "mscdirect"],
+    mode: "search-engine",
+    browserPreferred: true,
+    searchUrlTemplate: "https://www.mscdirect.com/browse/tn?searchterm={query}",
+    notes:
+      "Raw HTTP search is blocked, but site-search discovery still returns result links. Use the browser for final confirmation.",
+  },
+  {
+    id: "mouser",
+    name: "Mouser Electronics",
+    homepage: "https://www.mouser.com/",
+    domain: "mouser.com",
+    mode: "hybrid",
+    browserPreferred: true,
+    searchUrlTemplate: "https://www.mouser.com/c/?q={query}",
+    notes:
+      "Direct search commonly returns access-denied pages, so browser validation is usually required. Keep Mouser in the trace set for explicit block detection.",
+  },
+  {
     id: "uline",
     name: "ULINE",
     homepage: "https://www.uline.com/",
